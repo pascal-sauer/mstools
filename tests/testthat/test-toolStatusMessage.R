@@ -92,10 +92,10 @@ test_that("toolStatusFunctionFromCalls resolves the call stack correctly", {
   expect_identical(mstools:::toolStatusFunctionFromCalls(calls), "readFoo")
 
   # namespaced calls are resolved to the plain function name
-  calls <- list(quote(pkg:::readBar()),
+  calls <- list(quote(yaml:::readBar()),
                 quote(toolStatusMessage("ok", "m")))
   expect_identical(mstools:::toolStatusFunctionFromCalls(calls), "readBar")
-  calls <- list(quote(pkg::calcBaz()),
+  calls <- list(quote(yaml::calcBaz()),
                 quote(toolStatusMessage("ok", "m")))
   expect_identical(mstools:::toolStatusFunctionFromCalls(calls), "calcBaz")
 

@@ -27,7 +27,8 @@ Imports:
     yaml
 Suggests:
     covr,
-    testthat
+    testthat,
+    withr
 Config/Needs/website: tidyverse/tidytemplate
 Config/roxygen2/version: 8.1.0
 Encoding: UTF-8
